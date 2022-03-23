@@ -168,6 +168,10 @@ class PieChartSectionData {
   /// 1.0 means near the outside of the [PieChart].
   final double badgePositionPercentageOffset;
 
+  /// Defines the radius of the arc of the rounded corners.
+  /// [roundedCornerDegrees] must also be set for this to work.
+  final double roundedCornerRadius;
+
   /// [PieChart] draws section from right side of the circle (0 degrees),
   /// each section have a [value] that determines how much it should occupy,
   /// this is depends on sum of all sections, each section should
@@ -198,6 +202,7 @@ class PieChartSectionData {
     Widget? badgeWidget,
     double? titlePositionPercentageOffset,
     double? badgePositionPercentageOffset,
+    double? roundedCornerRadius,
   })  : value = value ?? 10,
         color = color ?? Colors.cyan,
         radius = radius ?? 40,
@@ -207,7 +212,8 @@ class PieChartSectionData {
         borderSide = borderSide ?? const BorderSide(width: 0),
         badgeWidget = badgeWidget,
         titlePositionPercentageOffset = titlePositionPercentageOffset ?? 0.5,
-        badgePositionPercentageOffset = badgePositionPercentageOffset ?? 0.5;
+        badgePositionPercentageOffset = badgePositionPercentageOffset ?? 0.5,
+        roundedCornerRadius = roundedCornerRadius ?? 0;
 
   /// Copies current [PieChartSectionData] to a new [PieChartSectionData],
   /// and replaces provided values.
@@ -222,6 +228,7 @@ class PieChartSectionData {
     Widget? badgeWidget,
     double? titlePositionPercentageOffset,
     double? badgePositionPercentageOffset,
+    double? roundedCornerRadius,
   }) {
     return PieChartSectionData(
       value: value ?? this.value,
@@ -236,6 +243,7 @@ class PieChartSectionData {
           titlePositionPercentageOffset ?? this.titlePositionPercentageOffset,
       badgePositionPercentageOffset:
           badgePositionPercentageOffset ?? this.badgePositionPercentageOffset,
+      roundedCornerRadius: roundedCornerRadius ?? this.roundedCornerRadius,
     );
   }
 
@@ -255,6 +263,8 @@ class PieChartSectionData {
           a.titlePositionPercentageOffset, b.titlePositionPercentageOffset, t),
       badgePositionPercentageOffset: lerpDouble(
           a.badgePositionPercentageOffset, b.badgePositionPercentageOffset, t),
+      roundedCornerRadius:
+          lerpDouble(a.roundedCornerRadius, b.roundedCornerRadius, t),
     );
   }
 }
