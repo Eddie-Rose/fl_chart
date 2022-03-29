@@ -145,32 +145,28 @@ void main() {
       expect(results.length, 4);
 
       final path0 = barChartPainter.generateSectionPath(
-          data.sections[0], 10, 0, 36, 0, const Offset(100, 100), 10,
-          initialSection: false, finalSection: false);
+          data.sections[0], 10, 0, 36, 0, const Offset(100, 100), 10);
       expect(
           HelperMethods.equalsPaths(results[0]['path'] as Path, path0), true);
       expect((results[0]['paint_color'] as Color), MockData.color1);
       expect((results[0]['paint_style'] as PaintingStyle), PaintingStyle.fill);
 
       final path1 = barChartPainter.generateSectionPath(
-          data.sections[1], 10, 36, 72, 0, const Offset(100, 100), 10,
-          initialSection: false, finalSection: false);
+          data.sections[1], 10, 36, 72, 0, const Offset(100, 100), 10);
       expect(
           HelperMethods.equalsPaths(results[1]['path'] as Path, path1), true);
       expect((results[1]['paint_color'] as Color), MockData.color2);
       expect((results[1]['paint_style'] as PaintingStyle), PaintingStyle.fill);
 
       final path2 = barChartPainter.generateSectionPath(
-          data.sections[2], 10, 108, 108, 0, const Offset(100, 100), 10,
-          initialSection: false, finalSection: false);
+          data.sections[2], 10, 108, 108, 0, const Offset(100, 100), 10);
       expect(
           HelperMethods.equalsPaths(results[2]['path'] as Path, path2), true);
       expect((results[2]['paint_color'] as Color), MockData.color3);
       expect((results[2]['paint_style'] as PaintingStyle), PaintingStyle.fill);
 
       final path3 = barChartPainter.generateSectionPath(
-          data.sections[3], 10, 216, 144, 0, const Offset(100, 100), 10,
-          initialSection: false, finalSection: false);
+          data.sections[3], 10, 216, 144, 0, const Offset(100, 100), 10);
       expect(
           HelperMethods.equalsPaths(results[3]['path'] as Path, path3), true);
       expect((results[3]['paint_color'] as Color), MockData.color4);
@@ -192,8 +188,7 @@ void main() {
       final PieChartPainter barChartPainter = PieChartPainter();
 
       final path0 = barChartPainter.generateSectionPath(
-          data.sections[0], 10, 0, 36, 0, const Offset(100, 100), 10,
-          initialSection: false, finalSection: false);
+          data.sections[0], 10, 0, 36, 0, const Offset(100, 100), 10);
       final path0Length = path0
           .computeMetrics()
           .toList()
@@ -202,8 +197,7 @@ void main() {
       expect(path0Length, 90.08028411865234);
 
       final path1 = barChartPainter.generateSectionPath(
-          data.sections[1], 10, 36, 72, 0, const Offset(100, 100), 10,
-          initialSection: false, finalSection: false);
+          data.sections[1], 10, 36, 72, 0, const Offset(100, 100), 10);
       final path1Length = path1
           .computeMetrics()
           .toList()
@@ -212,8 +206,7 @@ void main() {
       expect(path1Length, 136.93048095703125);
 
       final path2 = barChartPainter.generateSectionPath(
-          data.sections[2], 10, 108, 108, 0, const Offset(100, 100), 10,
-          initialSection: false, finalSection: false);
+          data.sections[2], 10, 108, 108, 0, const Offset(100, 100), 10);
       final path2Length = path2
           .computeMetrics()
           .toList()
@@ -222,8 +215,7 @@ void main() {
       expect(path2Length, 174.60133361816406);
 
       final path3 = barChartPainter.generateSectionPath(
-          data.sections[3], 10, 216, 144, 0, const Offset(100, 100), 10,
-          initialSection: false, finalSection: false);
+          data.sections[3], 10, 216, 144, 0, const Offset(100, 100), 10);
       final path3Length = path3
           .computeMetrics()
           .toList()
@@ -245,8 +237,7 @@ void main() {
       final PieChartPainter barChartPainter = PieChartPainter();
 
       final path0 = barChartPainter.generateSectionPath(
-          data.sections[0], 0, 0, 36, 0, const Offset(100, 100), 10,
-          initialSection: false, finalSection: false);
+          data.sections[0], 0, 0, 36, 0, const Offset(100, 100), 10);
       final path0Length = path0
           .computeMetrics()
           .toList()
@@ -255,8 +246,7 @@ void main() {
       expect(path0Length, 117.56398010253906);
 
       final path1 = barChartPainter.generateSectionPath(
-          data.sections[1], 0, 36, 72, 0, const Offset(100, 100), 10,
-          initialSection: false, finalSection: false);
+          data.sections[1], 0, 36, 72, 0, const Offset(100, 100), 10);
       final path1Length = path1
           .computeMetrics()
           .toList()
@@ -265,8 +255,7 @@ void main() {
       expect(path1Length, 155.1278076171875);
 
       final path2 = barChartPainter.generateSectionPath(
-          data.sections[2], 0, 108, 108, 0, const Offset(100, 100), 10,
-          initialSection: false, finalSection: false);
+          data.sections[2], 0, 108, 108, 0, const Offset(100, 100), 10);
       final path2Length = path2
           .computeMetrics()
           .toList()
@@ -275,8 +264,7 @@ void main() {
       expect(path2Length, 192.84017944335938);
 
       final path3 = barChartPainter.generateSectionPath(
-          data.sections[3], 0, 216, 144, 0, const Offset(100, 100), 10,
-          initialSection: false, finalSection: false);
+          data.sections[3], 0, 216, 144, 0, const Offset(100, 100), 10);
       final path3Length = path3
           .computeMetrics()
           .toList()
@@ -298,8 +286,7 @@ void main() {
       final PieChartPainter barChartPainter = PieChartPainter();
 
       final path0 = barChartPainter.generateSectionPath(
-          data.sections[0], 0, 0, 36, 0, const Offset(100, 100), 3,
-          initialSection: false, finalSection: false);
+          data.sections[0], 0, 0, 36, 0, const Offset(100, 100), 3);
       final path0Length = path0
           .computeMetrics()
           .toList()
@@ -308,8 +295,7 @@ void main() {
       expect(path0Length, 108.80243682861328);
 
       final path1 = barChartPainter.generateSectionPath(
-          data.sections[1], 0, 36, 72, 0, const Offset(100, 100), 4,
-          initialSection: false, finalSection: false);
+          data.sections[1], 0, 36, 72, 0, const Offset(100, 100), 4);
       final path1Length = path1
           .computeMetrics()
           .toList()
@@ -318,8 +304,7 @@ void main() {
       expect(path1Length, 140.05465698242188);
 
       final path2 = barChartPainter.generateSectionPath(
-          data.sections[2], 0, 108, 108, 0, const Offset(100, 100), 5,
-          initialSection: false, finalSection: false);
+          data.sections[2], 0, 108, 108, 0, const Offset(100, 100), 5);
       final path2Length = path2
           .computeMetrics()
           .toList()
@@ -328,8 +313,7 @@ void main() {
       expect(path2Length, 173.86875915527344);
 
       final path3 = barChartPainter.generateSectionPath(
-          data.sections[3], 0, 216, 144, 0, const Offset(100, 100), 6,
-          initialSection: false, finalSection: false);
+          data.sections[3], 0, 216, 144, 0, const Offset(100, 100), 6);
       final path3Length = path3
           .computeMetrics()
           .toList()
